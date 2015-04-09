@@ -43,7 +43,7 @@ def last(input_list):
     [ A, B, C, D ] --> D
     """
 
-    return []
+    return input_list.pop()
 
 
 def init(input_list):
@@ -51,8 +51,8 @@ def init(input_list):
     Return all elements of the input list except the last.
     [ A, B, C, D ] --> [ A, B, C ]
     """
-
-    return []
+    input_list.pop()
+    return input_list
 
 
 ##############################################################################
