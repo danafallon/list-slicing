@@ -66,7 +66,7 @@ def first_three(input_list):
     [ A, B, C, D, E, F ] --> [ A, B, C ]
     """
 
-    return []
+    return input_list[:3]
 
 
 def last_five(input_list):
@@ -75,7 +75,7 @@ def last_five(input_list):
     [ A, B, C, D, E, F ] --> [ B, C, D, E, F ]
     """
 
-    return []
+    return input_list[-5:]
 
 
 def middle(input_list):
@@ -84,7 +84,7 @@ def middle(input_list):
     [ A, B, C, D, E, F ] --> [ C, D ]
     """
 
-    return []
+    return input_list[2:-2]
 
 
 def inner_four(input_list):
@@ -93,7 +93,7 @@ def inner_four(input_list):
     [ A, B, C, D, E, F, G ] --> [ C, D, E, F ]
     """
 
-    return []
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -103,8 +103,9 @@ def inner_four_end(input_list):
     [ A, B, C, D, E, F, G, H, I, J, K, L] --> [ G, H, I, J ]
     """
 
-    return []
+    return input_list[-6:-2]
 
+## switch
 
 def replace_head(input_list):
     """
