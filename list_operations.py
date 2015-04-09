@@ -34,7 +34,7 @@ def tail(input_list):
     [ A, B, C, D ] --> [ B, C, D ]
     """
 
-    return []
+    return input_list[1:]
 
 
 def last(input_list):
