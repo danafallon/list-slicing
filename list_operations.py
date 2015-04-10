@@ -112,8 +112,8 @@ def replace_head(input_list):
     Replace the head of the input list with the value 42.
     [ A, B, C, D ] --> [ 42, B, C, D]
     """
-
-    pass
+    input_list[0] = 42
+    return input_list
 
 
 def replace_third_and_last(input_list):
@@ -121,8 +121,9 @@ def replace_third_and_last(input_list):
     Replace the third and last elements of the input list with the value 37.
     [ A, B, C, D, E, F ] --> [ A, B, 37, D, E, 37 ]
     """
-
-    pass
+    input_list[2] = 37
+    input_list[-1] = 37
+    return input_list
 
 
 def replace_middle(input_list):
@@ -131,8 +132,8 @@ def replace_middle(input_list):
     that order, except for the first two and last two elements.
     [ A, B, C, D, E, F, G, H, I ] --> [ A, B, 42, 37, H, I ]
     """
-
-    pass
+    input_list[2:-2] = [42, 37]
+    return input_list
 
 
 def delete_third_and_seventh(input_list):
@@ -140,8 +141,9 @@ def delete_third_and_seventh(input_list):
     Remove the third and seventh elements of the input list.
     [ A, B, C, D, E, F, G, H ] --> [ A, B, D, E, F, H ]
     """
-
-    pass
+    del input_list[2]
+    del input_list[5]
+    return input_list
 
 
 def delete_middle(input_list):
@@ -150,8 +152,8 @@ def delete_middle(input_list):
     last two.
     [ A, B, C, D, E, F, G, H ] --> [ A, B, G, H ]
     """
-
-    pass
+    del input_list[2:-2]
+    return input_list
 
 
 ##############################################################################
