@@ -228,8 +228,14 @@ def custom_remove(input_list, value):
     like input_list.remove(value), should remove the first item of the
     value specified and return nothing
     """
+    index = 0
+    for item in input_list:
+        if item == value:
+            del input_list[index]
+            break
+        else:
+            index = index + 1
 
-    pass
 
 
 def custom_pop(input_list):
@@ -237,8 +243,9 @@ def custom_pop(input_list):
     like input_list.pop(), should remove the last item in the list and
     return it
     """
-
-    return None
+    last = input_list[-1]
+    del input_list[-1]
+    return last
 
 
 def custom_index(input_list, value):
