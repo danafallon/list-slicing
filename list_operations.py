@@ -234,8 +234,7 @@ def custom_remove(input_list, value):
             del input_list[index]
             break
         else:
-            index = index + 1
-
+            index += 1
 
 
 def custom_pop(input_list):
@@ -253,8 +252,12 @@ def custom_index(input_list, value):
     like input_list.index(value), should return the index of the first item
     which matches the specified value
     """
-
-    return 0
+    index = 0
+    for item in input_list:
+        if item == value:
+            return index
+        else:
+            index += 1
 
 
 def custom_count(input_list, value):
@@ -262,8 +265,11 @@ def custom_count(input_list, value):
     like input_list.count(value), should return the number of times the specified
     value appears in the list.
     """
-
-    return 0
+    count = 0
+    for item in input_list:
+        if item == value:
+            count += 1
+    return count
 
 
 def custom_reverse(input_list):
@@ -271,8 +277,14 @@ def custom_reverse(input_list):
     like input_list.reverse(), should reverse the elements of the original list
     and return nothing (we call this reversing "in place")
     """
+    rev_order = []
+    for item in input_list:
+        rev_order = [item] + rev_order
 
-    pass
+    index = 0
+    for item in input_list:
+        input_list[index] = rev_order[index]
+        index += 1
 
 
 def custom_contains(input_list, value):
@@ -281,8 +293,13 @@ def custom_contains(input_list, value):
     specified value and False if it does not. Remember, do not use the `in`
     statement -- find another way to solve it!
     """
+    found = False
+    for item in input_list:
+        if item == value:
+            found = True
+                
+    return found
 
-    return None
 
 
 def custom_equality(some_list, another_list):
@@ -290,9 +307,29 @@ def custom_equality(some_list, another_list):
     like (some_list == another_list), should return True if both lists contain
     the same values in the same indexes
     """
+    count_some_list = 0         #first check whether lists are same length
+    for item in some_list:
+        count_some_list += 1
 
-    return None
+    count_another_list = 0
+    for item in another_list:
+        count_another_list += 1
 
+    if count_some_list != count_another_list:        # compare lengths here
+        return False
+
+    same = True                     #if same length
+    index = 0
+    for item in some_list:
+        if some_list[index] != another_list[index]:
+            same = False
+            break
+        else:
+            index += 1
+
+    return same
+
+print custom_equality([1, 2, 3], [1, 2, 4])
 
 ##############################################################################
 # END OF EXTRA CREDIT

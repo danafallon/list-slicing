@@ -223,7 +223,7 @@ class TestListOperations(unittest.TestCase):
                                                        'Oct', 'Nov', 'Dec']))
         self.assertFalse(custom_equality(self.notes, self.notes[::-1]))
         self.assertFalse(custom_equality(self.multiples, [0, 3, 6, 9, 12, 15, 18,
-                                                         21, 24]))
+                                                        21, 24]))
 
 if __name__ == '__main__':
     unittest.main()
